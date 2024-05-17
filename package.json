@@ -15,7 +15,7 @@
     "smoke-pack-headless": "cypress run -e TAGS=\"@smoke\" && node multiple-cucumber-html-reporter",
     "contact-us-without-smoke-headed": "cypress run --headed -e TAGS=\"@contact-us and not @smoke\" && node multiple-cucumber-html-reporter",
     "regression-pack-headed": "cypress run --headed -e TAGS=\"@regression and not @smoke\" && node multiple-cucumber-html-reporter",
-    "@url-title-pack-headed": "cypress run --headed -e TAGS=\"@url_title_login and @url_title_contactUs\" && node multiple-cucumber-html-reporter"
+    "url-title-pack-headed": "cypress run --headed -e TAGS=\"@url_title_login and @url_title_contactUs\" && node multiple-cucumber-html-reporter"
   },
   "author": "Hozan Beniamin",
   "license": "ISC",
