@@ -4,4 +4,4 @@
 - Page Object Model
 - BDD -> Cucumber
 - multiple cucumber html reporter
-- build with parameters(scripts / tags / browser) deployed using Jenkins / cucumber reports
+- build with parameters (scripts / tags / browsers) deployed using Jenkins / cucumber reports
