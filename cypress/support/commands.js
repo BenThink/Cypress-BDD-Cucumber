@@ -58,3 +58,25 @@ Cypress.Commands.add('assertElementVisibleByTagName', (tagName, attribute) => {
     cy.getByTagName(tagName, attribute).should('be.visible')
 })
 
+// ----------------------------------------------------------------------- //
+
+Cypress.Commands.add('assertResponseBodyValue', (path, expectedValue, assertionMethod) => {
+    const keys = path.split('.')
+
+    cy.get('@response').then((resp) => {
+        let target = resp.body
+
+        keys.forEach(key => {
+            // Check if the property exists before accessing it
+            if (target && target.hasOwnProperty(key)) {
+                target = target[key]
+            } else {
+                throw new Error(`Property '${key}' not found in response body`)
+            }
+        })
+
+        expect(target)[assertionMethod](expectedValue)
+    })
+})
+
+
