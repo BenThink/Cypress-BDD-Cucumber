@@ -6,7 +6,12 @@ import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esb
 
 
 export default defineConfig({
+  env:{
+    // for API testing
+    url: "https://regres.in/api/"
+  },
   e2e: {
+    screenshotOnRunFailure: false,  // for API testing
     baseUrl: 'https://webdriveruniversity.com/',
     specPattern: "**/*.feature",
     video: false,
