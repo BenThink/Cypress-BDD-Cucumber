@@ -1,6 +1,6 @@
 # Cypress-BDD-Cucumber
 
-- small project built with Cypress v13+
+- project built with Cypress v13+
 - Page Object Model
 - BDD -> Cucumber
 - multiple cucumber html reporter
