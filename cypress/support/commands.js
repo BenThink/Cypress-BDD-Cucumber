@@ -60,8 +60,9 @@ Cypress.Commands.add('assertElementVisibleByTagName', (tagName, attribute) => {
 
 // ----------------------------------------------------------------------- //
 
+// assert Response Body
 Cypress.Commands.add('assertResponseBodyValue', (path, expectedValue, assertionMethod) => {
-    const keys = path.split('.')
+    const keys = path.split('.') // for nested objects
 
     cy.get('@response').then((resp) => {
         let target = resp.body
