@@ -11,7 +11,7 @@ Feature: Multiple API Requests Testing with Cypress and Cucumber
 
     @postError
     Scenario: Validate POST Request Error Assertions
-        When I make a "POST" request to "login" with failOnStatusCode "false" and body
+        When I make a "POST" request to "login" with failOnStatusCode false and body
             | email            | eve.holt@reqres.in |
             | failOnStatusCode | false              |
         Then the response status should be 400
