@@ -21,8 +21,9 @@ When('I make a {string} request to {string} with body', (method, endpoint, dataT
 })
 
 
-When('I make a {string} request to {string} with failOnStatusCode {string} and body', (method, endpoint, failOnStatusCode, dataTable) => {
+When('I make a {string} request to {string} with failOnStatusCode false and body', (method, endpoint, dataTable) => {
     const body = dataTable.rawTable[0][1]
+    const failOnStatusCode = dataTable.rawTable[1][1]
 
     cy.request({
         method: method,
